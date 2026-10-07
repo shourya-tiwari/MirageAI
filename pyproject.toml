@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirageai"
+version = "0.8.0"
+description = "Explainable machine learning for urban heat island drivers in Pune"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Shourya Tiwari" },
+    { name = "Shashwat Kumar" },
+    { name = "Rishik Sinha" },
+    { name = "Shubhankar Bhan" },
+]
+requires-python = ">=3.11"
+# The libraries the package and its scripts import, unpinned; requirements.txt
+# pins them to the verified versions (D-055).
+dependencies = [
+    "earthengine-api",
+    "numpy", "pandas", "pyarrow",
+    "scikit-learn", "scipy", "xgboost", "lightgbm", "joblib",
+    "shap", "statsmodels",
+    "libpysal", "esda", "rasterio",
+    "matplotlib", "plotly",
+    "streamlit",
+    "python-pptx", "pillow",
+    "psutil",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyterlab", "ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
