@@ -1,0 +1,4 @@
+comparison,spearman,kendall,top5_same_set,top5_same_order,only_in_a,only_in_b
+"lgbm vs xgb, all cells",0.989010989010989,0.9487179487179485,True,False,,
+"lgbm vs xgb, urban",0.9725274725274725,0.8974358974358972,True,False,,
+lgbm all vs lgbm urban,0.9780219780219779,0.9230769230769229,True,False,,

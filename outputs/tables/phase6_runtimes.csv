@@ -1,0 +1,4 @@
+stage,model,fit_s,shap_s,peak_rss_mb
+fit+interventional,lgbm,4.1,1759.5,458
+interactions,lgbm,0.0,166.3,514
+fit+interventional,xgb,6.7,262.0,656
