@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="$for(author)$$author$$sep$; $endfor$">
+<title>$pagetitle$</title>
+$for(css)$
+<link rel="stylesheet" href="$css$">
+$endfor$
+</head>
+<body>
+<header class="title-block">
+<h1 class="title">$title$</h1>
+<div class="authors">
+$for(author)$
+<div class="author"><span class="name">$author$</span><span class="affil">$affiliation$</span><span class="affil">$city$</span></div>
+$endfor$
+</div>
+</header>
+<main class="ieee">
+<div class="abstract"><span class="lead">Abstract</span>—$abstract$</div>
+<div class="keywords"><span class="lead">Index Terms</span>—$for(keywords)$$keywords$$sep$, $endfor$.</div>
+$body$
+</main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* IEEE conference layout (A4) for the MirageAI report, printed to PDF by headless Chrome.
+   Geometry follows the IEEE A4 conference template: 14.32 mm side margins, two
+   88.9 mm columns with a 4.22 mm gutter, Times 10 pt body. */
+
+@page {
+  size: A4;
+  margin: 19mm 14.32mm 24mm 14.32mm;
+  @bottom-center {
+    content: counter(page);
+    font: 9pt "Times New Roman", Times, serif;
+    color: #333;
+  }
+}
+
+:root {
+  counter-reset: sec fig-dummy eq;
+}
+
+html { font-size: 10pt; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10pt;
+  line-height: 1.18;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-rendering: geometricPrecision;
+}
+
+/* ---- Title block (spans both columns) ---------------------------------- */
+.title-block { text-align: center; margin: 0 0 14pt; }
+.title-block .title {
+  font-size: 22pt; font-weight: normal; line-height: 1.12;
+  margin: 2pt 6mm 12pt;
+}
+.authors {
+  display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 4mm;
+}
+.author { display: flex; flex-direction: column; font-size: 10pt; line-height: 1.25; }
+.author .name { font-size: 11pt; }
+.author .affil { font-style: italic; font-size: 9pt; }
+
+/* ---- Two-column body ---------------------------------------------------- */
+main.ieee {
+  column-count: 2;
+  column-gap: 4.22mm;
+  column-fill: auto;
+  text-align: justify;
+}
+main.ieee p { margin: 0; text-indent: 1em; }
+main.ieee h1 + p, main.ieee h2 + p, main.ieee h3 + p,
+main.ieee figure + p, main.ieee table + p, main.ieee .eq + p,
+main.ieee ul + p, main.ieee ol + p, main.ieee div + p { text-indent: 1em; }
+
+.abstract, .keywords { font-size: 9pt; font-weight: bold; line-height: 1.2; text-align: justify; }
+.abstract p, .keywords p { display: inline; text-indent: 0; }
+.abstract .lead, .keywords .lead { font-style: italic; }
+.keywords { margin: 4pt 0 2pt; }
+
+/* ---- Headings: I. INTRODUCTION / A. Subsection -------------------------- */
+main.ieee h1 {
+  counter-increment: sec; counter-reset: sub;
+  font-size: 10pt; font-weight: normal; font-variant: small-caps; letter-spacing: 0.02em;
+  text-align: center; margin: 10pt 0 4pt; break-after: avoid;
+}
+main.ieee h1::before { content: counter(sec, upper-roman) ". "; }
+main.ieee h1.unnumbered::before { content: none; }
+main.ieee h2 {
+  counter-increment: sub;
+  font-size: 10pt; font-weight: normal; font-style: italic;
+  text-align: left; margin: 7pt 0 3pt; break-after: avoid;
+}
+main.ieee h2::before { content: counter(sub, upper-alpha) ". "; }
+
+/* ---- Lists -------------------------------------------------------------- */
+main.ieee ul, main.ieee ol { margin: 2pt 0 2pt; padding-left: 1.4em; }
+main.ieee li { margin: 0 0 1pt; }
+main.ieee li p { text-indent: 0; }
+
+/* ---- Figures ------------------------------------------------------------ */
+main.ieee figure { margin: 6pt 0 6pt; break-inside: avoid; text-align: center; }
+main.ieee figure img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+main.ieee figcaption {
+  font-size: 8pt; line-height: 1.2; text-align: justify; margin-top: 3pt; text-indent: 0;
+}
+.wide { column-span: all; margin: 4pt 0 8pt; }
+.wide figure { margin: 0; }
+.wide figcaption { padding: 0 6mm; }
+
+/* ---- Tables ------------------------------------------------------------- */
+main.ieee table {
+  width: 100%; border-collapse: collapse; font-size: 8pt; line-height: 1.15;
+  margin: 6pt 0 8pt; break-inside: avoid;
+  border-top: 1px solid #000; border-bottom: 1px solid #000;
+}
+main.ieee caption {
+  caption-side: top; font-size: 8pt; font-variant: small-caps; letter-spacing: 0.02em;
+  text-align: center; padding-bottom: 3pt;
+}
+main.ieee thead th { border-bottom: 0.6px solid #000; font-weight: normal; font-style: italic; }
+main.ieee th, main.ieee td { padding: 1.6pt 3pt; text-align: left; vertical-align: top; }
+main.ieee td:not(:first-child), main.ieee th:not(:first-child) { text-align: center; }
+.wide table { margin: 0; }
+.lefttable td, .lefttable th { text-align: left !important; }
+.lefttable td:first-child { width: 24%; }
+
+/* ---- Equations: (n) right-aligned --------------------------------------- */
+.eq { display: flex; align-items: center; margin: 4pt 0; break-inside: avoid; }
+.eq > p { flex: 1; text-indent: 0; text-align: center; }
+.eq::after { counter-increment: eq; content: "(" counter(eq) ")"; font-size: 10pt; }
+math[display="block"] { margin: 0; font-size: 10.5pt; }
+math { font-family: "Cambria Math", "STIX Two Math", serif; }
+
+/* ---- References --------------------------------------------------------- */
+main.ieee .references p { text-indent: -2.2em; padding-left: 2.2em; font-size: 8pt; line-height: 1.2; margin-bottom: 1.5pt; text-align: left; }
+
+code { font-family: Consolas, "Courier New", monospace; font-size: 8.5pt; }
+a { color: inherit; text-decoration: none; }
+strong { font-weight: bold; }
+
+/* ---- Algorithm box -------------------------------------------------------- */
+.algo {
+  border-top: 1px solid #000; border-bottom: 1px solid #000;
+  margin: 6pt 0 8pt; padding: 2pt 0 3pt; font-size: 9pt; line-height: 1.2; break-inside: avoid;
+}
+.algo > p { text-indent: 0 !important; border-bottom: 0.6px solid #000; padding-bottom: 2pt; margin-bottom: 2pt; }
+main.ieee .algo ol { padding-left: 1.8em; margin: 0; }
+.algo li:nth-child(n+4):nth-child(-n+7) { margin-left: 1em; }
+.algo li:nth-child(n+6):nth-child(-n+7) { margin-left: 2em; }
