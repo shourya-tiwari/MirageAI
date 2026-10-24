@@ -1,0 +1,20 @@
+slide,title,figures,body_words,note_words,note_seconds,presenter
+1,MirageAI (title),01_lst_map_2024.png,0,106,45,Shourya
+2,Motivation,— (headline number),36,102,44,Shourya
+3,Problem statement,— (native cards),43,95,41,Shourya
+4,Objectives,— (native list),57,102,44,Shourya
+5,Dataset,01_ndvi_map_2024.png,25,102,44,Shourya
+6,Methodology,03_block_layout.png,26,109,47,Shashwat
+7,ML pipeline,09_pipeline.png,13,112,48,Shashwat
+8,Exploratory data analysis,01_lst_map_2024.png + 08_cool_island.png,16,108,46,Shashwat
+9,Models,— (native cards),44,102,44,Shashwat
+10,Evaluation,05_cv_gap.png,15,100,43,Shashwat
+11,Results: accuracy,— (native table),19,115,49,Rishik
+12,Results: drivers,09_group_ranking.png + 06_dominant_driver_map.png,15,118,51,Rishik
+13,Results: greening,07_target_cells.png + 09_scenario_bracket.png,14,118,51,Rishik
+14,Dashboard demo,dashboard_interactive_prediction.png,28,112,48,Rishik
+15,Key insights,08_tree_cover_dependence.png,27,102,44,Shubhankar
+16,Limitations,05_residual_map.png,24,102,44,Shubhankar
+17,Future scope,— (native cards),39,93,40,Shubhankar
+18,Conclusion,— (planner sentence),67,111,48,Shubhankar
+19,Thank you,—,28,28,12,Shubhankar
