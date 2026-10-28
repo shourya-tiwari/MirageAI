@@ -1,0 +1,47 @@
+# MirageAI: the packages the project imports directly, pinned to the versions the
+# results were produced with. pip resolves everything they depend on.
+#
+#   pip install -r requirements.txt
+#   pip install -e .
+#
+# Python 3.11 or newer. requirements-lock.txt pins the full resolved environment
+# for an exact rebuild (D-055).
+
+# Data acquisition (Google Earth Engine)
+earthengine-api==1.7.47
+
+# Data handling
+numpy==2.4.6
+pandas==3.0.6
+pyarrow==25.0.1
+
+# Machine learning
+scikit-learn==1.9.1
+scipy==1.17.1
+xgboost==3.2.0
+lightgbm==4.7.0
+joblib==1.6.0
+
+# Explainability and statistics
+shap==0.51.0
+statsmodels==0.15.0
+
+# Spatial analysis
+libpysal==4.14.1
+esda==2.9.0
+rasterio==1.4.4
+
+# Plotting and dashboard
+matplotlib==3.11.2
+plotly==7.1.0
+streamlit==1.65.0
+
+# Report and slide builds
+python-pptx==1.0.2
+pillow==12.3.0
+
+# Pipeline runner, tests and notebooks
+psutil==7.2.2
+pytest==9.1.1
+jupyterlab==4.6.4
+ipykernel==7.4.0
