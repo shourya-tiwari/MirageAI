@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software or its results, please cite it as below."
 title: "MirageAI: Concrete vs. Canopy. Explainable machine learning for urban heat island drivers in Pune"
 type: software
-version: 0.8.0
-date-released: 2026-10-27
+version: 1.0.0
+date-released: 2026-10-28
 license: MIT
 repository-code: "https://github.com/shourya-tiwari/MirageAI"
 authors:

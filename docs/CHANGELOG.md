@@ -3,11 +3,19 @@
 All notable changes to MirageAI (formerly Ushna) are recorded here.
 Format based on [Keep a Changelog](https://keepachangelog.com/). Sections: **Added**, **Changed**, **Fixed**, **Removed**, **Data**, **Results**.
 
-## [Unreleased]
+## [1.0.0] - 2026-10-28
+
+First public release: https://github.com/shourya-tiwari/MirageAI
 
 Phase 8, part 1 (report draft): T8.1-T8.3 done. Part 2 (slides and viva
 prep): T8.4-T8.5 done. Part 3: reproducibility tooling and submission
-package; the clean-copy run (T8.6) is not yet complete.
+package. The clean-copy run (T8.6) reproduced Phases 2-3 byte for byte and
+the Phase 4 runs it reached (D-052); the full end-to-end rerun is still open.
+
+### Release
+- Package version 0.8.0 → 1.0.0 in `pyproject.toml`, `mirageai.__version__`
+  and `CITATION.cff`; the citation now links the public repository
+- README Quick Start clones from the public repository URL
 
 ### Changed (dependencies and setup, 2026-10-27; D-055)
 - `requirements.txt` now lists only the 23 direct dependencies, pinned; no
@@ -572,18 +580,3 @@ authentication, which both need an interactive Google sign-in.
 - Documentation scaffold: PROJECT, ROADMAP, TASKS, INSTRUCTIONS, DECISIONS, REFERENCE, CHANGELOG, LEARNING_LOG
 - Team registration submitted (Domain: Smart Cities; SDG 11, SDG 13)
 
----
-
-<!--
-Template for new entries:
-
-## [0.X.0] - YYYY-MM-DD
-### Added
-- (Tx.y) ...
-### Changed
-- ...
-### Data
-- Exported 2024 grid: N rows, M Landsat scenes, K Sentinel-2 scenes
-### Results
-- Spatial CV RMSE (LightGBM): X.XX ± X.XX °C
--->

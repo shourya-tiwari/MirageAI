@@ -54,5 +54,5 @@ re-make the zip (`python scripts/make_submission.py`).
   "0 flagged".
 - [ ] Re-make `MirageAI_Final_Submission.zip` (project root) and check that it opens
   and holds the report PDF/DOCX/HTML and the slides PPTX/PDF.
-- [ ] When the repository is public, add its URL to `CITATION.cff`
+- [x] When the repository is public, add its URL to `CITATION.cff`
   (`repository-code:`) and to the README.
