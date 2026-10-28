@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "MirageAI: Concrete vs. Canopy. Explainable machine learning for urban heat island drivers in Pune"
+type: software
+version: 0.8.0
+date-released: 2026-10-27
+license: MIT
+repository-code: "https://github.com/shourya-tiwari/MirageAI"
+authors:
+  - family-names: Tiwari
+    given-names: Shourya
+    affiliation: Symbiosis Institute of Technology, Pune
+  - family-names: Kumar
+    given-names: Shashwat
+    affiliation: Symbiosis Institute of Technology, Pune
+  - family-names: Sinha
+    given-names: Rishik
+    affiliation: Symbiosis Institute of Technology, Pune
+  - family-names: Bhan
+    given-names: Shubhankar
+    affiliation: Symbiosis Institute of Technology, Pune
+keywords:
+  - urban heat island
+  - land surface temperature
+  - spatial cross-validation
+  - SHAP
+  - explainable machine learning
+  - Google Earth Engine
